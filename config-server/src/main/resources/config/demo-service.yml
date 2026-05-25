@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+app:
+  greeting: Hello from Spring Cloud demo-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
