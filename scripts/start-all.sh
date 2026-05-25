@@ -58,12 +58,10 @@ start_module config-server
 start_module demo-service
 start_module gateway-server
 
-echo
-echo "All services started."
-echo "Eureka:  http://localhost:8761"
-echo "Config:  http://localhost:8888/demo-service/default"
-echo "Gateway: http://localhost:8080/api/demo/hello"
-echo
+echo ""
+bash "$ROOT_DIR/scripts/show-startup-logs.sh"
 echo "Press Ctrl+C to stop all services."
+echo "实时日志: tail -f $LOG/*.log"
+echo ""
 
 wait
